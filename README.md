@@ -103,13 +103,13 @@ It is built as a **hands-on Kotlin OOP learning project** demonstrating:
   </tr>
   <tr>
     <td>
-      <img width="220" alt="Circle Screen" src="https://placehold.co/220x440/1A1A2E/FF1744?text=Circle+Screen"/>
+      <img width="220" alt="Circle Screen" src="https://github.com/user-attachments/assets/533fe427-d4d4-4a9d-9df5-bbda06c1b8a6"/>
     </td>
     <td>
-      <img width="220" alt="Rectangle Screen" src="https://placehold.co/220x440/1A1A2E/2962FF?text=Rectangle+Screen"/>
+      <img width="220" alt="Rectangle Screen" src="https://github.com/user-attachments/assets/00c48dd9-9ed4-4fb0-af3e-e74f45e87944"/>
     </td>
     <td>
-      <img width="220" alt="Triangle Screen" src="https://placehold.co/220x440/1A1A2E/00C853?text=Triangle+Screen"/>
+      <img width="220" alt="Triangle Screen" src="https://github.com/user-attachments/assets/094a5869-39b0-4feb-ab24-9bf2ea742cf8"/>
     </td>
   </tr>
 </table>
@@ -577,24 +577,24 @@ classDiagram
 
 ```mermaid
 graph TB
-    subgraph UI["🧩 UI Layer (Jetpack Compose)"]
-        MA[MainActivity.kt]
+    subgraph UI["🧩 UI Layer — Jetpack Compose"]
+        MA[MainActivity]
         MSS[MainScreen Composable]
         SSC[ShapeSelector — FilterChip]
         SIC[ShapeInputCard — OutlinedTextField]
-        SR[ShapeResultCard — Area · Perimeter]
+        SR[ShapeResultCard — Area and Perimeter]
         CC[CanvasCard — live shape drawing]
         SL[ShapeList — LazyColumn]
     end
 
-    subgraph State["💡 State Layer (Compose State)"]
+    subgraph State["💡 State Layer — Compose State"]
         S1[remember — selectedShapeType]
         S2[remember — inputValues]
         S3[remember — currentShape]
         S4[mutableStateListOf — shapeHistory]
     end
 
-    subgraph OOP["🏗️ OOP Layer (Kotlin Classes)"]
+    subgraph OOP["🏗️ OOP Layer — Kotlin Classes"]
         DR[interface Drawable]
         SH[sealed class Shape]
         CI[data class Circle]
@@ -604,10 +604,10 @@ graph TB
     end
 
     subgraph Logic["⚙️ Logic Layer"]
-        ARC[area() — abstract override]
-        PRC[perimeter() — abstract override]
-        DRC[draw() — polymorphic Canvas call]
-        VAL[init — validation]
+        ARC[area — abstract override]
+        PRC[perimeter — abstract override]
+        DRC[draw — polymorphic Canvas call]
+        VAL[init — validation block]
     end
 
     MA --> MSS
